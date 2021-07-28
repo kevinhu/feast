@@ -49,9 +49,6 @@ class ConfigMeta(type):
         return super().__new__(cls, name, bases, attrs)
 
 
-#: Default datetime column name for point-in-time join
-DATETIME_COLUMN: str = "datetime"
-
 #: Environmental variable to specify Feast configuration file location
 FEAST_CONFIG_FILE_ENV: str = "FEAST_CONFIG"
 
@@ -260,8 +257,8 @@ class ConfigOptions(metaclass=ConfigMeta):
     #: Oauth token request url
     OAUTH_TOKEN_REQUEST_URL: Optional[str] = None
 
-    #: Telemetry enabled
-    TELEMETRY = "True"
+    #: Usage enabled
+    USAGE = "True"
 
     #: Object store registry
     REGISTRY_PATH: Optional[str] = None
